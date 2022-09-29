@@ -1,4 +1,6 @@
-# mrub 
+from setuptools import setup, find_packages
+
+text : str = '''# mrub 
 The official mrub  repository, unofficial and high-speed library for rubika...
 # how to install library
 Enter the following command to install the library in your terminal
@@ -65,3 +67,28 @@ async def main():
 ```
 pip install mrub 
 ```
+'''
+
+requirements : list = ["pycryptodome" , "pillow" , "aiohttp" , "websocket-client"]
+
+setup(
+    name = "mrub ",
+    version = "3.0.0",
+    author = "Mahdi Vazini",
+    author_email = "mvazini2@gmail.com",
+    description = "This is an unofficial library for deploying robots on Rubika accounts.",
+    long_description = str(text),
+    long_description_content_type = "text/markdown",
+    url = "https://github.com/Mvra93/mrub /",
+    packages = find_packages(),
+    install_requires = requirements,
+    classifiers = [
+    	"Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "License :: OSI Approved :: MIT License",
+    ],
+)
